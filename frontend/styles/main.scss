@@ -4,6 +4,7 @@ body{
     color:#071C4D;
 }
 
+// Navbar
 .navbar-light{
     .navbar-nav{
         .nav-link{
@@ -39,4 +40,33 @@ body{
     margin-right: -18px !important;
     height: 70px;
     border-radius: 0;
+}
+
+// Header
+header{
+    margin-top:-68px;
+    padding: 180px 0px 87px 0px;
+    background-image: url('../images/background/header.jpg');
+    background-size: cover;
+    min-height: 100vh;
+
+    h1{
+        font-family: 'Playfair Display', sans-serif; 
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    p{
+        font-size: 22px;
+    }
+}
+
+.btn-get-started{
+    background-color: #FF9E53;
+    color: white;
+
+    &:hover{
+        background-color: #FFAA69;
+        color: white;
+    }
 }
