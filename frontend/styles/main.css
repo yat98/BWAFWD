@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(206, 206, 206);
+  background-color: white;
   font-family: "Assistant", sans-serif;
   color: #071C4D;
 }
@@ -132,4 +132,23 @@ header p {
 .section-popular-content .section-popular-travel .travel-button .btn-travel-details:hover {
   background-color: #FFAA69;
   color: white;
+}
+
+.section-networks {
+  background-color: white;
+  margin-top: -170px;
+  padding-top: 270px;
+  padding-bottom: 50px;
+}
+.section-networks h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: bold;
+  margin-bottom: 14px;
+  font-size: 40px;
+}
+.section-networks p {
+  font-size: 18px;
+}
+.section-networks img {
+  max-width: 100%;
 }/*# sourceMappingURL=main.css.map */
