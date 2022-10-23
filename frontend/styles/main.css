@@ -28,17 +28,16 @@ body {
 .btn-navbar-right {
   margin-top: -10px !important;
   margin-bottom: -8px !important;
-  margin-right: -18px !important;
+  margin-right: -16px !important;
   height: 70px;
   border-radius: 0;
 }
 
 header {
   margin-top: -68px;
-  padding: 180px 0px 87px 0px;
+  padding: 180px 0px 125px;
   background-image: url("../images/background/header.jpg");
   background-size: cover;
-  min-height: 100vh;
 }
 header h1 {
   font-family: "Playfair Display", sans-serif;
@@ -56,4 +55,22 @@ header p {
 .btn-get-started:hover {
   background-color: #FFAA69;
   color: white;
+}
+
+.section-stats {
+  margin-top: -50px;
+}
+.section-stats .stats-detail {
+  padding-top: 15px;
+  background-color: white;
+  padding-left: 40px;
+}
+.section-stats h2 {
+  font-size: 30px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+.section-stats p {
+  font-size: 20px;
+  font-weight: lighter;
 }/*# sourceMappingURL=main.css.map */
