@@ -154,10 +154,11 @@ header{
         }
 
         .travel-button{
+            z-index: 2;
+
             .btn-travel-details{
                 background-color: #FF9E53;
                 color: white;
-                z-index: 2;
 
                 &:hover{
                     background-color: #FFAA69;
@@ -191,3 +192,79 @@ header{
     }
 }
 
+// Testimonial
+.section-testimonials-heading{  
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F7F9FF 100%);
+    padding-top: 50px;
+    min-height: 569px;
+
+    h2{
+        font-family: 'Playfair Display', sans-serif; 
+        font-weight: bold;
+        margin-bottom: 14px;
+        font-size: 40px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+}
+
+.section-testimonials-content{
+    margin-top: -300px;
+    padding-bottom: 50px;
+
+    .card-testimonials{
+        border-radius: 11px;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-content{
+        padding: 40px 20px 10px;
+        min-height: 380px;
+
+        h3{
+            font-size: 22px;
+        }
+
+        .testimonial{
+            font-size: 26px;
+            font-family: 'Assistant', sans-serif;
+            font-weight: 200;
+            min-height: 160px;
+            color: #6E6E6E;
+        }
+
+    }
+
+    .card-footer{
+        background-color: transparent;
+        border-top: 1px solid  #E3E3E3;
+    }
+
+    .trip-to{
+        font-weight: normal;
+        font-size: 22px;
+        color: #6E6E6E;
+    }
+
+    .btn-get-started{
+        background-color: #FF9E53;
+        color: white;
+    
+        &:hover{
+            background-color: #FFAA69;
+            color: white;
+        }
+    }
+
+    .btn-help{
+        background-color: #F3F3F3;
+        color: #C3C3C3;
+
+        &:hover{
+            background-color: #FAFAFA;
+            color: #C3C3C3;
+        }
+    }
+}
