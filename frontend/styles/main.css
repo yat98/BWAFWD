@@ -236,4 +236,61 @@ header p {
   font-weight: lighter;
   color: #6E6E6E;
   font-size: 18px;
+}
+
+.section-detail-header {
+  min-height: 310px;
+  background-color: #E4E6Eb;
+  margin-top: -70px;
+}
+
+.section-detail-content {
+  margin-top: -210px;
+  min-height: 100vh;
+}
+.section-detail-content .breadcrumb {
+  padding: 0px;
+}
+.section-detail-content .breadcrumb-item {
+  font-weight: light;
+}
+.section-detail-content .breadcrumb-item.active {
+  font-weight: bold;
+  color: #071C4D;
+}
+
+.card-details {
+  padding: 30px;
+  border-radius: 11px;
+}
+.card-details h1 {
+  font-size: 26px;
+}
+.card-details h2 {
+  font-size: 20px;
+}
+.card-details p {
+  font-size: 18px;
+  color: #B1B1B1;
+}
+.card-details .features {
+  margin-top: 20px;
+}
+.card-details .features .description {
+  margin-left: 10px;
+  float: left;
+  overflow: hidden;
+}
+.card-details .features .featured-icon {
+  width: 45px;
+  height: 45px;
+  float: left;
+}
+.card-details h3 {
+  font-size: 18px;
+  color: #071C4D;
+  margin-bottom: 0px;
+}
+.card-details p {
+  margin-bottom: 0px;
 }/*# sourceMappingURL=main.css.map */
