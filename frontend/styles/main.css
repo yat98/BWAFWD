@@ -184,6 +184,7 @@ header p {
 }
 .section-testimonials-content .testimonials-content h3 {
   font-size: 22px;
+  font-weight: 600;
 }
 .section-testimonials-content .testimonials-content .testimonial {
   font-size: 26px;
@@ -216,4 +217,23 @@ header p {
 .section-testimonials-content .btn-help:hover {
   background-color: #FAFAFA;
   color: #C3C3C3;
+}
+
+.footer a {
+  color: #071C4D;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.footer a:hover {
+  text-decoration: underline !important;
+}
+.footer h5 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+.footer .footer-content {
+  font-weight: lighter;
+  color: #6E6E6E;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
