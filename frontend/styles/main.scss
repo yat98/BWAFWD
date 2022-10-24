@@ -326,10 +326,19 @@ header{
 
     h1{
         font-size: 26px;
+        margin-bottom: 6px;
+        font-weight: 600;
     }
 
     h2{
         font-size: 20px;
+        margin-top: 30px;
+        margin-top: 14px;
+        font-weight: 600;
+    }
+
+    p:first{
+        margin-bottom: 21px;
     }
 
     p{
@@ -338,7 +347,7 @@ header{
     }
 
     .features{
-        margin-top: 20px;
+        margin-top: 30px;
 
         .description{
             margin-left: 10px;
@@ -358,9 +367,26 @@ header{
         color: #071C4D;
         margin-bottom: 0px;
     }
-
-    p{
-        margin-bottom: 0px;
-    }
 }
 
+.gallery{
+    .xzoom-container{
+        display: block;
+
+        .xzoom{
+            width: 100%;
+            box-shadow: none;
+            margin-bottom: 10px;
+        }
+
+        .xactive{
+            border: 4px solid #1ABC9C;
+            box-shadow: none;
+        }
+    }
+
+    .xzoom-thumbs{
+        margin-left: -18px;
+        padding-right: 0px;
+    }
+}
