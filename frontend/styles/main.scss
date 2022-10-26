@@ -332,8 +332,8 @@ header{
 
     h2{
         font-size: 20px;
-        margin-top: 30px;
-        margin-top: 14px;
+        margin-top: 25px;
+        margin-bottom: 14px;
         font-weight: 600;
     }
 
@@ -350,15 +350,21 @@ header{
         margin-top: 30px;
 
         .description{
-            margin-left: 10px;
-            float: left;
             overflow: hidden;
+
+            h3{
+                font-weight: 300;
+            }
+
+            p{
+                font-weight: 300;
+                font-size: 14px;
+            }
         }
 
         .featured-icon{
             width: 45px;
             height: 45px;
-            float: left;
         }
     }
 
@@ -366,6 +372,52 @@ header{
         font-size: 18px;
         color: #071C4D;
         margin-bottom: 0px;
+    }
+}
+
+.card-right{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    h2{
+        margin-top: 0px;
+        margin-bottom: 14px;
+    }
+
+    hr{
+        margin-bottom: 20px;
+    }
+
+    .trip-information{
+        margin-bottom: 20px;
+
+        th{
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        td{
+            font-weight: 300;
+            font-size: 18px;
+            color: #B1B1B1;
+            padding-bottom: 8px;
+        }
+    }
+}
+
+.join-container{
+    margin-top: -17px;
+    
+    .btn-join-now{
+        background-color: #FF9E53;
+        position: relative;
+        color: white;
+        border-radius: 0px;
+
+        &:hover{
+            background-color: #FFAA69;
+            color:white;
+        }
     }
 }
 
@@ -388,5 +440,23 @@ header{
     .xzoom-thumbs{
         margin-left: -18px;
         padding-right: 0px;
+    }
+}
+
+.members{
+    .member-image{
+        height: 40px;
+        width: 40px;
+    }
+
+    .member-circle{
+        background-color: #EDF2FF;
+        vertical-align: middle;
+
+        p{
+            font-size: 20px;
+            color: #5772B2;
+            font-weight: 600;
+        }
     }
 }

@@ -270,8 +270,8 @@ header p {
 }
 .card-details h2 {
   font-size: 20px;
-  margin-top: 30px;
-  margin-top: 14px;
+  margin-top: 25px;
+  margin-bottom: 14px;
   font-weight: 600;
 }
 .card-details p:first {
@@ -285,19 +285,62 @@ header p {
   margin-top: 30px;
 }
 .card-details .features .description {
-  margin-left: 10px;
-  float: left;
   overflow: hidden;
+}
+.card-details .features .description h3 {
+  font-weight: 300;
+}
+.card-details .features .description p {
+  font-weight: 300;
+  font-size: 14px;
 }
 .card-details .features .featured-icon {
   width: 45px;
   height: 45px;
-  float: left;
 }
 .card-details h3 {
   font-size: 18px;
   color: #071C4D;
   margin-bottom: 0px;
+}
+
+.card-right {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card-right h2 {
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+.card-right hr {
+  margin-bottom: 20px;
+}
+.card-right .trip-information {
+  margin-bottom: 20px;
+}
+.card-right .trip-information th {
+  font-weight: 300;
+  font-size: 18px;
+}
+.card-right .trip-information td {
+  font-weight: 300;
+  font-size: 18px;
+  color: #B1B1B1;
+  padding-bottom: 8px;
+}
+
+.join-container {
+  margin-top: -17px;
+}
+.join-container .btn-join-now {
+  background-color: #FF9E53;
+  position: relative;
+  color: white;
+  border-radius: 0px;
+}
+.join-container .btn-join-now:hover {
+  background-color: #FFAA69;
+  color: white;
 }
 
 .gallery .xzoom-container {
@@ -315,4 +358,18 @@ header p {
 .gallery .xzoom-thumbs {
   margin-left: -18px;
   padding-right: 0px;
+}
+
+.members .member-image {
+  height: 40px;
+  width: 40px;
+}
+.members .member-circle {
+  background-color: #EDF2FF;
+  vertical-align: middle;
+}
+.members .member-circle p {
+  font-size: 20px;
+  color: #5772B2;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */
