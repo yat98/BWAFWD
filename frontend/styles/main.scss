@@ -454,9 +454,52 @@ header{
         vertical-align: middle;
 
         p{
-            font-size: 20px;
+            font-size: 16px;
             color: #5772B2;
-            font-weight: 600;
+            font-weight: bold;
         }
     }
+}
+
+// Checkout
+.attendee{
+    table{
+        thead{
+            font-weight: 300;
+        }
+
+        .attendee-picture{
+            height: 60px;
+            width: 60px;
+        }
+    }
+}
+
+.member{
+    h3{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .disclaimer{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .btn-add-now{
+        background-color: #071C4D;
+        color: white;
+
+        &:hover{
+            background-color: #1E3771;
+            color: white;
+        }
+    }
+}
+
+// Datepicker
+.ui-datepicker-trigger{
+    position: absolute;
+    top: 8px;
+    right: 12px;
 }

@@ -369,7 +369,38 @@ header p {
   vertical-align: middle;
 }
 .members .member-circle p {
-  font-size: 20px;
+  font-size: 16px;
   color: #5772B2;
+  font-weight: bold;
+}
+
+.attendee table thead {
+  font-weight: 300;
+}
+.attendee table .attendee-picture {
+  height: 60px;
+  width: 60px;
+}
+
+.member h3 {
+  font-size: 14px;
   font-weight: 600;
+}
+.member .disclaimer {
+  font-size: 14px;
+  font-weight: 300;
+}
+.member .btn-add-now {
+  background-color: #071C4D;
+  color: white;
+}
+.member .btn-add-now:hover {
+  background-color: #1E3771;
+  color: white;
+}
+
+.ui-datepicker-trigger {
+  position: absolute;
+  top: 8px;
+  right: 12px;
 }/*# sourceMappingURL=main.css.map */

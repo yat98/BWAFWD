@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="libraries/xzoom/xzoom.min.css">
+    <link rel="stylesheet" href="libraries/jquery-ui/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="libraries/jquery-ui/css/jquery-ui.theme.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
@@ -16,51 +18,16 @@
     <!-- Navbar -->
     <div class="container-lg px-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
-            <a href="#" class="navbar-brand">
-                <img src="images/logo/logo.svg" alt="Logo NOMADS">
-            </a>
-            <button class="navbar-toggler navbar-toggler-right"
-                type="button" data-bs-toggle="collapse" data-bs-target="#nav-nomads-top"
-                aria-controls="nav-nomads-top" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="nav-nomads-top">
-                <ul class="navbar-nav ms-auto me-3">
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link active">Travel Packages</a>
-                    </li>
-                    <li class="nav-item mx-md-2 dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" 
-                            id="navbar-nomads-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="" class="dropdown-item">Link 1</a>
-                            <a href="" class="dropdown-item">Link 2</a>
-                            <a href="" class="dropdown-item">Link 3</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Testimonial</a>
-                    </li>
-                </ul>
-                 <!-- Mobile Button -->
-                 <form action="" class="d-inline my-2 d-sm-block d-md-none">
-                    <button class="btn btn-login my-2 my-sm-0">
-                        Login
-                    </button>
-                </form>
-
-                <!-- Desktop Button -->
-                <form action="" class="d-inline my-2 my-lg-0 d-none d-md-block">
-                    <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
-                        Login
-                    </button>
-                </form>
+            <div class="navbar-nav ms-auto me-auto me-sm-auto me-lg-0 me-md-auto">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/logo/logo.svg" alt="Logo NOMADS">
+                </a>
             </div>
+            <ul class="navbar-nav me-auto d-none d-lg-block border-start ps-3 py-1">
+                <li>
+                    <span class="text-muted">Beyond the explorer of the world</span>
+                </li>
+            </ul>
         </nav>
     </div>
 
@@ -74,7 +41,8 @@
                         <nav class="ms-3 ms-md-0">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Travel Packages</li>
-                                <li class="breadcrumb-item active">Details</li>
+                                <li class="breadcrumb-item">Details</li>
+                                <li class="breadcrumb-item active">Checkout</li>
                             </ol>
                         </nav>
                     </div>
@@ -82,70 +50,83 @@
                 <div class="row">
                     <div class="col-lg-8 ps-lg-0">
                         <div class="card card-details">
-                            <h1>Nusa Penida</h1>
-                            <p>Republic of Indonesia Raya</p>
-                            <div class="gallery">
-                                <div class="xzoom-container">
-                                    <img src="images/details/detail1.jpg" class="xzoom" id="xzoom-default" 
-                                        xoriginal="images/details/detail1.jpg">
-                                </div>
-                                <div class="xzoom-thumbs">
-                                    <a href="images/details/detail1.jpg">
-                                        <img src="images/details/detail1.jpg" class="xzoom-gallery" width="128" 
-                                            xpreview="images/details/detail1.jpg">
-                                    </a>
-                                    <a href="images/details/detail1.jpg">
-                                        <img src="images/details/detail1.jpg" class="xzoom-gallery" width="128" 
-                                            xpreview="images/details/detail1.jpg">
-                                    </a>
-                                    <a href="images/details/detail1.jpg">
-                                        <img src="images/details/detail1.jpg" class="xzoom-gallery" width="128" 
-                                            xpreview="images/details/detail1.jpg">
-                                    </a>
-                                    <a href="images/details/detail1.jpg">
-                                        <img src="images/details/detail1.jpg" class="xzoom-gallery" width="128" 
-                                            xpreview="images/details/detail1.jpg">
-                                    </a>
-                                    <a href="images/details/detail1.jpg">
-                                        <img src="images/details/detail1.jpg" class="xzoom-gallery" width="128" 
-                                            xpreview="images/details/detail1.jpg">
-                                    </a>
-                                </div>
+                            <h1>Who is Going?</h1>
+                            <p>Trip to Ubud, Bali, Indonesia</p>
+                            <div class="attendee">
+                                <table class="table table-responsive-sm text-center">
+                                    <thead>
+                                        <tr">
+                                            <td class="border-bottom py-3">Picture</td>
+                                            <td class="border-bottom py-3">Name</td>
+                                            <td class="border-bottom py-3">Nationality</td>
+                                            <td class="border-bottom py-3">Visa</td>
+                                            <td class="border-bottom py-3">Passport</td>
+                                            <td class="border-bottom py-3"> </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle py-3">
+                                                <img src="images/testimonials/testimonial1.jpg" class="attendee-picture rounded-circle">
+                                            </td>
+                                            <td class="align-middle py-3">Angga Rizky</td>
+                                            <td class="align-middle py-3">CN</td>
+                                            <td class="align-middle py-3">N/A</td>
+                                            <td class="align-middle py-3">Active</td>
+                                            <td class="align-middle py-3">
+                                                <a href="">
+                                                    <img src="images/icon/ic_times.svg">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle py-3">
+                                                <img src="images/testimonials/testimonial2.jpg" class="attendee-picture rounded-circle">
+                                            </td>
+                                            <td class="align-middle py-3">Galih Pratama</td>
+                                            <td class="align-middle py-3">SG</td>
+                                            <td class="align-middle py-3">30 Days</td>
+                                            <td class="align-middle py-3">Active</td>
+                                            <td class="align-middle py-3">
+                                                <a href="">
+                                                    <img src="images/icon/ic_times.svg">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <h2>About Travel</h2>
-                            <p>
-                                Nusa Penida is an island located in the southeastern Indonesian island of Bali and 
-                                a district of Klungkung Regency that includes the neighbouring small island of Nusa 
-                                Lembongan and twelve even smaller islands. The Badung Strait separates the island 
-                                and Bali. The interior of Nusa Penida is hilly with a maximum altitude of 524 metres. 
-                                It is drier than the nearby island of Bali. 
-                            </p>
-                            <p>
-                                There are thirteen small islands nearby - Nusa Lembongan, Nusa Ceningan and eleven
-                                even smaller - which are included within the district (kecamatan).
-                            </p>
-                            <div class="features row">
-                                <div class="col-4 text-center text-md-start">
-                                    <img src="images/icon/ic_event.svg" alt="Icon" class="featured-icon d-md-inline mx-auto d-block float-none float-md-start">
-                                    <div class="description float-none float-md-left ps-xs-0 ps-md-2 mt-3 mt-md-0">
-                                        <h3>Featured Event</h3>
-                                        <p>Tari Kecak</p>
+                            <div class="member mt-3">
+                                <h2>Add Member</h2>
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 pe-1">
+                                            <label for="username" class="visually-hidden">Username</label>
+                                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="username">
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-1">
+                                            <label for="name" class="visually-hidden">Visa</label>
+                                            <select class="form-select">
+                                                <option value="visa" selected>Visa</option>
+                                                <option value="30 days">30 Days</option>
+                                                <option value="N/A">N/A</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 px-1">
+                                            <label for="name" class="visually-hidden">DOE Passport</label>
+                                            <div class="position-relative">
+                                                <input type="text" class="form-control datepicker position-relative" placeholder="DOE Passport" aria-label="DOE Passport">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-1">
+                                            <input type="submit" value="Add Now" class="btn btn-add-now w-100">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4 border-start ps-lg-4 text-center text-md-start">
-                                    <img src="images/icon/ic_lang.svg" alt="Icon" class="featured-icon d-md-inline mx-auto d-block float-none float-md-start">
-                                    <div class="description float-none float-md-left ps-xs-0 ps-md-2 mt-3 mt-md-0">
-                                        <h3>Languange</h3>
-                                        <p>Bahasa Indonesia</p>
-                                    </div>
-                                </div>
-                                <div class="col-4 border-start ps-lg-4 text-center text-md-start">
-                                    <img src="images/icon/ic_food.svg" alt="Icon" class="featured-icon d-md-inline mx-auto d-block float-none float-md-start">
-                                    <div class="description float-none float-md-left ps-xs-0 ps-md-2 mt-3 mt-md-0">
-                                        <h3>Foods</h3>
-                                        <p>Local Foods</p>
-                                    </div>
-                                </div>
+                                </form>
+                                <h3 class="mt-4 b-0">Note</h3>
+                                <p class="disclaimer mb-0">
+                                    You are only able to invite the member that has registered in Nomads
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -253,6 +234,7 @@
     <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
     <script src="libraries/retina/retina.min.js"></script>
     <script src="libraries/xzoom/xzoom.min.js"></script>
+    <script src="libraries/jquery-ui/js/jquery-ui.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 </html>
