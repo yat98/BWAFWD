@@ -438,8 +438,38 @@ header p {
   width: 45px;
   height: 45px;
 }
+
 .ui-datepicker-trigger {
   position: absolute;
   top: 8px;
   right: 12px;
+}
+
+.section-success {
+  min-height: 90vh;
+}
+.section-success h1 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #071C4D;
+  margin-bottom: 6px;
+}
+.section-success p {
+  font-weight: 300;
+  font-size: 18px;
+  color: #B1B1B1;
+}
+.section-success .btn-homepage {
+  background-color: #071C4D;
+  color: white;
+  margin-top: 50px;
+  border-radius: 4px;
+}
+.section-success .btn-homepage:hover {
+  background-color: #1E3771;
+  color: white;
+}
+.section-success .mail-icon {
+  width: 220px;
+  height: 220px;
 }/*# sourceMappingURL=main.css.map */
