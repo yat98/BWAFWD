@@ -100,11 +100,11 @@
                                 <h2>Add Member</h2>
                                 <form action="">
                                     <div class="row">
-                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 pe-1">
+                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 pe-lg-1">
                                             <label for="username" class="visually-hidden">Username</label>
                                             <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="username">
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-1">
+                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-lg-1">
                                             <label for="name" class="visually-hidden">Visa</label>
                                             <select class="form-select">
                                                 <option value="visa" selected>Visa</option>
@@ -112,13 +112,13 @@
                                                 <option value="N/A">N/A</option>
                                             </select>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 px-1">
+                                        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-lg-0 px-lg-1">
                                             <label for="name" class="visually-hidden">DOE Passport</label>
                                             <div class="position-relative">
                                                 <input type="text" class="form-control datepicker position-relative" placeholder="DOE Passport" aria-label="DOE Passport">
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-1">
+                                        <div class="col-sm-12 col-md-6 col-lg-2 mb-3 mb-lg-0 px-lg-1">
                                             <input type="submit" value="Add Now" class="btn btn-add-now w-100">
                                         </div>
                                     </div>
@@ -132,48 +132,83 @@
                     </div>
                     <div class="col-lg-4 mt-5 mt-lg-0">
                         <div class="card card-details card-right">
-                            <h2>Members Are Going</h2>
-                            <div class="members my-2">
-                                <img src="images/members/member1.jpg" class="member-image mr-2 rounded-circle">
-                                <img src="images/members/member2.jpg" class="member-image mr-2 rounded-circle">
-                                <img src="images/members/member3.jpg" class="member-image mr-2 rounded-circle">
-                                <img src="images/members/member4.jpg" class="member-image mr-2 rounded-circle">
-                                <span class="member-image rounded-circle d-inline-block member-circle">
-                                    <p class="d-flex align-items-center justify-content-center h-100 rounded-circle">9+</p>
-                                </span>
-                            </div>
-                            <hr>
-                            <h2>Trip Information</h2>
+                            <h2>Checkout Informations</h2>
                             <table class="trip-information">
                                 <tr>
-                                    <th width="50%">Date of Depature</th>
+                                    <th width="50%">Members</th>
                                     <td width="50%" class="text-end">
-                                        22 Aug 2022
+                                        2 Person
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th width="50%">Duration</th>
+                                    <th width="50%">Additional Visa</th>
                                     <td width="50%" class="text-end">
-                                        4D 3N
+                                        $190,00
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th width="50%">Type</th>
-                                    <td width="50%" class="text-end">
-                                        Open Type
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th width="50%">Price</th>
+                                    <th width="50%">Trip Price</th>
                                     <td width="50%" class="text-end">
                                         $80,00 / Person
                                     </td>
                                 </tr>
+                                <tr>
+                                    <th width="50%">Total Price</th>
+                                    <td width="50%" class="text-end">
+                                        $280,00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="55%">Total (+Unique Code)</th>
+                                    <td width="45%" class="text-end">
+                                        <span class="unique-code-blue">$279,</span>
+                                        <span class="unique-code-yellow">33</span>
+                                    </td>
+                                </tr>
                             </table>
+                            <hr>
+                            <h2>Payment Instructions</h2>
+                            <p class="text-muted payment-instruction">
+                                Please complete the payment before you 
+                                <br>
+                                continue the wonderful trip
+                            </p>
+                            <div class="bank">
+                                <div class="bank-item pb-3">
+                                    <img src="images/icon/ic_bank.svg " class="bank-icon">
+                                    <div class="description">
+                                        <h3>PT. Nomads ID</h3>
+                                        <p   class="my-1">
+                                            8261 16251 262666
+                                        </p>
+                                        <p>
+                                            Bank Central Asia
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bank-item pb-3">
+                                    <img src="images/icon/ic_bank.svg " class="bank-icon">
+                                    <div class="description">
+                                        <h3>PT. Nomads ID</h3>
+                                        <p   class="my-1">
+                                            777 126261 27211
+                                        </p>
+                                        <p>
+                                            Bank HSBC
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
                         <div class="join-container">
                             <a href="" class="btn d-block btn-join-now mt-3 py-2">
-                                Join Now
+                                I Have Made Payment
+                            </a>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="" class="text-muted">
+                                Cancel Booking
                             </a>
                         </div>
                     </div>

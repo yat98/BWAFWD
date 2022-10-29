@@ -389,8 +389,6 @@ header{
     }
 
     .trip-information{
-        margin-bottom: 20px;
-
         th{
             font-weight: 300;
             font-size: 18px;
@@ -402,6 +400,21 @@ header{
             color: #B1B1B1;
             padding-bottom: 8px;
         }
+
+        .unique-code-blue{
+            color: #071C4D;
+            font-weight: bold;
+        }
+
+        .unique-code-yellow{
+            color: #FF9E53;
+        }
+    }
+
+    .payment-instruction{
+        font-size: 14px;
+        font-weight: 300;
+        color: #B1B1B1;
     }
 }
 
@@ -495,6 +508,50 @@ header{
             color: white;
         }
     }
+}
+
+.bank{
+    .bank-item{
+        overflow: hidden;
+        margin-bottom: 8px;
+
+        h3{
+            font-size: 18px;
+            color: #071C4D;
+            margin-bottom: 0px;
+        }
+
+        p{
+            margin-bottom: 0px;
+        }
+
+        .description{
+            margin-left: 10px;
+            overflow: hidden;
+            float: left;
+
+            h3{
+                font-weight: normal;
+            }
+
+            p{
+                font-weight: normal;
+                font-size: 16px;
+                color: #071C4D;
+            }
+        }
+
+        .bank-icon{
+            float: left;
+            width: 45px;
+            height: 45px;
+        }
+
+        .description{
+
+        }
+    }
+
 }
 
 // Datepicker

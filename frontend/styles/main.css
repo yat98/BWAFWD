@@ -315,9 +315,6 @@ header p {
 .card-right hr {
   margin-bottom: 20px;
 }
-.card-right .trip-information {
-  margin-bottom: 20px;
-}
 .card-right .trip-information th {
   font-weight: 300;
   font-size: 18px;
@@ -327,6 +324,18 @@ header p {
   font-size: 18px;
   color: #B1B1B1;
   padding-bottom: 8px;
+}
+.card-right .trip-information .unique-code-blue {
+  color: #071C4D;
+  font-weight: bold;
+}
+.card-right .trip-information .unique-code-yellow {
+  color: #FF9E53;
+}
+.card-right .payment-instruction {
+  font-size: 14px;
+  font-weight: 300;
+  color: #B1B1B1;
 }
 
 .join-container {
@@ -399,6 +408,36 @@ header p {
   color: white;
 }
 
+.bank .bank-item {
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.bank .bank-item h3 {
+  font-size: 18px;
+  color: #071C4D;
+  margin-bottom: 0px;
+}
+.bank .bank-item p {
+  margin-bottom: 0px;
+}
+.bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+.bank .bank-item .description h3 {
+  font-weight: normal;
+}
+.bank .bank-item .description p {
+  font-weight: normal;
+  font-size: 16px;
+  color: #071C4D;
+}
+.bank .bank-item .bank-icon {
+  float: left;
+  width: 45px;
+  height: 45px;
+}
 .ui-datepicker-trigger {
   position: absolute;
   top: 8px;
