@@ -1,4 +1,5 @@
 <x-layouts.admin>
+    <x-slot:title>Dashboard</x-slot:title>
     <div class="container-fluid">
 
         <!-- Page Heading -->
