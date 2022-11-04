@@ -1,7 +1,7 @@
 <x-layouts.app>
     <x-slot:title>Home</x-slot:title>
-     <!-- Header -->
-     <header class="text-center text-white">
+    <!-- Header -->
+    <header class="text-center text-white">
         <h1>
             Explore the Beautiful World
             <br>
