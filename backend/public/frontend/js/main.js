@@ -14,7 +14,7 @@ $(document).ready(function(){
     if(datepicker.length > 0){
         datepicker.datepicker({
             showOn: "both",
-            buttonImage: "images/icon/ic_doe.svg",
+            buttonImage: "frontend/img/icon/ic_doe.svg",
             buttonImageOnly: true,
             dateFormat: 'yy-mm-dd'
         })
