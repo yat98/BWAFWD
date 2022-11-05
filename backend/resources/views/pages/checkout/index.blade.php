@@ -177,12 +177,12 @@
                             </div>
                         </div>
                         <div class="join-container">
-                            <a href="success-checkout.html" class="btn d-block btn-join-now mt-3 py-2">
+                            <a href="{{ route('checkout.success') }}" class="btn d-block btn-join-now mt-3 py-2">
                                 I Have Made Payment
                             </a>
                         </div>
                         <div class="text-center mt-3">
-                            <a href="detail.html" class="text-muted">
+                            <a href="{{ route('detail') }}" class="text-muted">
                                 Cancel Booking
                             </a>
                         </div>

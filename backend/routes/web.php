@@ -26,7 +26,10 @@ Route::get('detail', [DetailController::class,'index'])
 Route::get('checkout', [CheckoutController::class,'index'])
     ->name('checkout');
 
-Route::prefix('admin')->namespace('Admin')
-    ->group(function() {
-        Route::get('/',[DashboardController::class,'index']);
-    });
+Route::get('checkout/success', [CheckoutController::class,'success'])
+    ->name('checkout.success');
+
+Route::group(['prefix' => 'admin','as' => 'admin.','namespace' => 'Admin'],function() {
+    Route::get('/',[DashboardController::class,'index'])
+        ->name('dashboard');
+});

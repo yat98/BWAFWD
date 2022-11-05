@@ -1,6 +1,6 @@
 <div class="container-lg px-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
-        <a href="#" class="navbar-brand">
+        <a href="{{ route('home') }}" class="navbar-brand">
             <img src="{{ asset('frontend/img/logo/logo.svg') }}" alt="Logo NOMADS">
         </a>
         <button class="navbar-toggler navbar-toggler-right"

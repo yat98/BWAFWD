@@ -88,7 +88,7 @@
                             <div class="travel-country">INDONESIA</div>
                             <div class="travel-location">NUSA PENIDA</div>
                             <div class="travel-button mt-auto">
-                                <a href="detail.html" class="btn btn-travel-details px-4">
+                                <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
                                     View Details
                                 </a>
                             </div>
