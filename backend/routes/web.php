@@ -34,4 +34,4 @@ Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','admi
         ->name('dashboard');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
