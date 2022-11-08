@@ -31,19 +31,39 @@
                     <a href="#" class="nav-link">Testimonial</a>
                 </li>
             </ul>
-             <!-- Mobile Button -->
-             <form action="" class="d-inline my-2 d-sm-block d-md-none">
-                <button class="btn btn-login my-2 my-sm-0">
-                    Login
-                </button>
-            </form>
+            @guest 
+                <!-- Mobile Button -->
+                <div class="d-inline my-2 d-sm-block d-md-none">
+                    <a href="{{ route('login') }}" class="btn btn-login my-2 my-sm-0">
+                        Login
+                    </a>
+                </div>
 
-            <!-- Desktop Button -->
-            <form action="" class="d-inline my-2 my-lg-0 d-none d-md-block">
-                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
-                    Login
-                </button>
-            </form>
+                <!-- Desktop Button -->
+                <div class="d-inline my-2 my-lg-0 d-none d-md-block">
+                    <a href="{{ route('login') }}" class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4 d-flex align-items-center">
+                        Login
+                    </a>
+                </div>
+            @endguest
+            
+            @auth
+                <!-- Mobile Button -->
+                <form action="{{ route('logout') }}" class="d-inline my-2 d-sm-block d-md-none" method="POST">
+                    @csrf
+                    <button class="btn btn-login my-2 my-sm-0">
+                        Logout
+                    </button>
+                </form>
+
+                <!-- Desktop Button -->
+                <form action="{{ route('logout') }}" class="d-inline my-2 my-lg-0 d-none d-md-block" method="POST">
+                    @csrf
+                    <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+                        Logout
+                    </button>
+                </form>
+            @endauth
         </div>
     </nav>
 </div>
