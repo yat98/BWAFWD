@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TravelPackageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,10 @@ Route::get('checkout', [CheckoutController::class,'index'])
 Route::get('checkout/success', [CheckoutController::class,'success'])
     ->name('checkout.success');
 
-Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','admin'],'namespace' => 'Admin'],function() {
+Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','admin']],function() {
     Route::get('/',[DashboardController::class,'index'])
         ->name('dashboard');
+    Route::resource('travel-packages', TravelPackageController::class);
 });
 
 Auth::routes(['verify' => true]);
