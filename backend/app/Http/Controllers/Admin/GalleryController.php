@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Gallery;
+use Illuminate\Http\Request;
+use App\Models\TravelPackage;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\GalleryRequest;
 
 class GalleryController extends Controller
@@ -28,18 +29,26 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        //
+        $travelPackages = TravelPackage::pluck('title','id')->toArray();
+
+        return view('pages.admin.galleries.create', compact('travelPackages'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  GalleryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GalleryRequest $request)
     {
-        //
+        $data = $request->validated();
+        $data['image'] = $request->file('image')->store(
+            'assets/gallery', 'public'
+        );
+
+        Gallery::create($data);
+        return redirect()->route('admin.gallery.index');
     }
 
     /**

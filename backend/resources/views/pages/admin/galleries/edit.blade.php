@@ -1,20 +1,20 @@
 <x-layouts.admin>
-    <x-slot:title>Edit Travel Packages</x-slot:title>
+    <x-slot:title>Edit Gallery Travel</x-slot:title>
     <div class="container-fluid">
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Edit Travel Packages</h1>
+            <h1 class="h3 mb-0 text-gray-800">Edit Gallery Travel</h1>
         </div>
 
         <!-- Content Row -->
         <x-errors.all />
         <div class="card shadow">
             <div class="card-body">
-                <form action="{{ route('admin.gallery.update',$travelPackage) }}" method="POST">
+                <form action="{{ route('admin.gallery.update',$gallery) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('put')
-                    @include('pages.admin.gallerys.form')
+                    @include('pages.admin.galleries.form')
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Ubah</button>
                     </div>
