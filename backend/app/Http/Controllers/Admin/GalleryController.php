@@ -98,11 +98,13 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Gallery  $gallery
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Gallery $gallery)
     {
-        //
+        $gallery->delete();
+
+        return redirect()->route('admin.gallery.index');
     }
 }
