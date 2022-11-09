@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\TravelPackage;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\TravelPackageRequest;
 
 class TravelPackageController extends Controller
 {
@@ -27,19 +29,23 @@ class TravelPackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.travel-packages.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param TravelPackageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TravelPackageRequest $request)
     {
-        //
-    }
+        $data = $request->validated();
+        $data['slug'] = Str::slug($data['title']);
+
+        TravelPackage::create($data);
+        return redirect()->route('admin.travel-packages.index');
+    }   
 
     /**
      * Display the specified resource.
