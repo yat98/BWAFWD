@@ -8,22 +8,22 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
 
     <!-- Nav Item - Travel Packages -->
-    <li class="nav-item">
+    <li class="nav-item {{ request()->routeIs('admin.travel-package.*') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('admin.travel-package.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Travel Packages</span></a>
     </li>
 
     <!-- Nav Item - Gallery Travels -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ request()->routeIs('admin.gallery.*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.gallery.index') }}">
             <i class="fas fa-fw fa-images"></i>
             <span>Gallery Travels</span></a>
     </li>
