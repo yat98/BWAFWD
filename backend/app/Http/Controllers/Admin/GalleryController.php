@@ -6,6 +6,7 @@ use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\TravelPackage;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Admin\GalleryRequest;
 
 class GalleryController extends Controller
@@ -65,24 +66,33 @@ class GalleryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Gallery $gallery
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Gallery $gallery)
     {
-        //
+        $travelPackages = TravelPackage::pluck('title','id')->toArray();
+
+        return view('pages.admin.galleries.edit', compact('gallery','travelPackages'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  GalleryRequest $request
+     * @param  Gallery $gallery
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GalleryRequest $request, Gallery $gallery)
     {
-        //
+        $data = $request->validated();
+        Storage::disk('public')->delete($gallery->image);
+        $data['image'] = $request->file('image')->store(
+            'assets/gallery', 'public'
+        );
+
+        $gallery->update($data);
+        return redirect()->route('admin.gallery.index');
     }
 
     /**

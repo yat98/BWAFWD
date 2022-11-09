@@ -3,7 +3,10 @@
     <select name="travel_package_id" id="travel_package_id" class="form-control" required>
         <option>-- Select Travel Package --</option>
         @foreach($travelPackages as $id => $title)
-            <option value="{{ $id }}">{{ $title }}</option>
+            <option value="{{ $id }}"
+                {{ isset($gallery) ? ($gallery->travel_package_id == $id ? 'selected' : '') : '' }}>
+                {{ $title }}
+            </option>
         @endforeach
     </select>
 </div>
