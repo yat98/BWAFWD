@@ -5,7 +5,7 @@
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Travel Packages</h1>
-            <a href="{{ route('admin.travel-packages.create') }}" class="btn btn-sm btn-primary shadow-sm">
+            <a href="{{ route('admin.travel-package.create') }}" class="btn btn-sm btn-primary shadow-sm">
                 <i class="fas fa-plus text-white-50"></i>
                 Add Travel Package
             </a>
@@ -37,10 +37,10 @@
                                     <td>{{ $item->departure }}</td>
                                     <td>{{ $item->type }}</td>
                                     <td>
-                                        <a href="{{ route('admin.travel-packages.edit',$item) }}" class="btn btn-sm btn-info">
+                                        <a href="{{ route('admin.travel-package.edit',$item) }}" class="btn btn-sm btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('admin.travel-packages.destroy',$item) }}" class="d-inline-block">
+                                        <form action="{{ route('admin.travel-package.destroy',$item) }}" class="d-inline-block">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-sm btn-danger">

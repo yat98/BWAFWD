@@ -16,7 +16,7 @@
 
     <!-- Nav Item - Travel Packages -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('admin.travel-packages.index') }}">
+        <a class="nav-link" href="{{ route('admin.travel-package.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Travel Packages</span></a>
     </li>

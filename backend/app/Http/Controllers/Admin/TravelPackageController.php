@@ -44,7 +44,7 @@ class TravelPackageController extends Controller
         $data['slug'] = Str::slug($data['title']);
 
         TravelPackage::create($data);
-        return redirect()->route('admin.travel-packages.index');
+        return redirect()->route('admin.travel-package.index');
     }   
 
     /**
@@ -61,24 +61,28 @@ class TravelPackageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  TravelPackage $travelPackage
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(TravelPackage $travelPackage)
     {
-        //
+        return view('pages.admin.travel-packages.edit', compact('travelPackage'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  TravelPackageRequest  $request
+     * @param  TravelPackage  $travelPackage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TravelPackageRequest $request, TravelPackage $travelPackage)
     {
-        //
+        $data = $request->validated();
+        $data['slug'] = Str::slug($data['title']);
+
+        $travelPackage->update($data);
+        return redirect()->route('admin.travel-package.index');
     }
 
     /**

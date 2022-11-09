@@ -33,7 +33,7 @@ Route::get('checkout/success', [CheckoutController::class,'success'])
 Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','admin']],function() {
     Route::get('/',[DashboardController::class,'index'])
         ->name('dashboard');
-    Route::resource('travel-packages', TravelPackageController::class);
+    Route::resource('travel-package', TravelPackageController::class);
 });
 
 Auth::routes(['verify' => true]);
