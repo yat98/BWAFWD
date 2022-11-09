@@ -88,11 +88,12 @@ class TravelPackageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  TravelPackage  $travelPackage
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(TravelPackage $travelPackage)
     {
-        //
+        $travelPackage->delete();
+        return redirect()->route('admin.travel-package.index');
     }
 }

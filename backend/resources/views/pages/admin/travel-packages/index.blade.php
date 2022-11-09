@@ -40,7 +40,7 @@
                                         <a href="{{ route('admin.travel-package.edit',$item) }}" class="btn btn-sm btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('admin.travel-package.destroy',$item) }}" class="d-inline-block">
+                                        <form action="{{ route('admin.travel-package.destroy',$item) }}" method="POST" class="d-inline-block">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-sm btn-danger">
