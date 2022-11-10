@@ -29,8 +29,8 @@
     </li>
 
     <!-- Nav Item - Transactions -->
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item {{ request()->routeIs('admin.transaction.*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.transaction.index') }}">
             <i class="fas fa-fw fa-dollar-sign"></i>
             <span>Transactions</span></a>
     </li>

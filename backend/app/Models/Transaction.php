@@ -21,7 +21,7 @@ class Transaction extends Model
     protected $hidden = [];
 
     public function travelPackage(){
-        return $this->belongsTo(travelPackage::class, 'travel_package_id');
+        return $this->belongsTo(TravelPackage::class, 'travel_package_id');
     }
 
     public function transactionMembers(){
