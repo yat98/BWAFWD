@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('transaction_total');
             /**
              * Status
-             * in_card, pending, success, cancel, failed
+             * in_cart, pending, success, cancel, failed
              */
             $table->string('transaction_status');
             $table->softDeletes();

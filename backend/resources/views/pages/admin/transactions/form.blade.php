@@ -1,16 +1,12 @@
 <div class="form-group">
-    <label for="travel_package_id">Travel Package</label>
-    <select name="travel_package_id" id="travel_package_id" class="form-control" required>
-        <option>-- Select Travel Package --</option>
-        @foreach($travelPackages as $id => $title)
+    <label for="transaction_status">Transaction Status</label>
+    <select name="transaction_status" id="transaction_status" class="form-control" required>
+        <option>-- Select Transaction Status --</option>
+        @foreach($statuses as $id => $status)
             <option value="{{ $id }}"
-                {{ isset($transaction) ? ($transaction->travel_package_id == $id ? 'selected' : '') : '' }}>
-                {{ $title }}
+                {{ isset($transaction) ? ($transaction->transaction_status == $id ? 'selected' : '') : '' }}>
+                {{ $status }}
             </option>
         @endforeach
     </select>
-</div>
-<div class="form-group">
-    <label for="image">Image</label>
-    <input type="file" class="form-control" name="image" placeholder="Image" value="{{ old('image') ?? (isset($transaction) ? $transaction->image : null) }}">
 </div>

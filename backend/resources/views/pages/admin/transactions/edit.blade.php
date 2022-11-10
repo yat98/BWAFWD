@@ -14,7 +14,7 @@
                 <form action="{{ route('admin.transaction.update',$transaction) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('put')
-                    @include('pages.admin.galleries.form')
+                    @include('pages.admin.transactions.form')
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Ubah</button>
                     </div>
