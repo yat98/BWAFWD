@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\TravelPackage;
 
 class DetailController extends Controller
 {
-    public function index()
+    public function index(TravelPackage $travelPackage)
     {
-        return view('pages.detail.index');
+        $travelPackage->load(['galleries']);
+        
+        return view('pages.detail.index', compact('travelPackage'));
     }
 }

@@ -26,13 +26,25 @@ Route::get('/', [HomeController::class,'index'])
 Route::get('detail/{travel_package:slug}', [DetailController::class,'index'])
     ->name('detail');
 
-Route::get('checkout', [CheckoutController::class,'index'])
-    ->name('checkout');
+Route::group(['middleware' => ['auth','verified','admin']], function(){
+    Route::post('checkout/{travel_package}', [CheckoutController::class,'process'])
+        ->name('checkout.process');
 
-Route::get('checkout/success', [CheckoutController::class,'success'])
-    ->name('checkout.success');
+    Route::get('checkout/{transaction}', [CheckoutController::class,'index'])
+        ->name('checkout.index');
 
-Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','admin']],function() {
+    Route::post('checkout/create/{transaction_member}', [CheckoutController::class,'create'])
+        ->name('checkout.create');
+
+    Route::get('checkout/remove/{transaction_member}', [CheckoutController::class,'remove'])
+        ->name('checkout.remove');
+    
+    Route::get('checkout/confirm/{transaction}', [CheckoutController::class,'success'])
+        ->name('checkout.success');
+});
+
+
+Route::group(['prefix' => 'admin','as' => 'admin.','middleware' => ['auth','verified','admin']], function() {
     Route::get('/',[DashboardController::class,'index'])
         ->name('dashboard');
     Route::resource('travel-package', TravelPackageController::class);

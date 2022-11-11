@@ -1,6 +1,6 @@
 <x-layouts.app>
     <x-slot:title>Verify Email</x-slot:title>
-    <div class="container mt-5">
+    <div class="container mt-5 pb-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">

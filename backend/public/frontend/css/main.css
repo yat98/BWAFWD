@@ -472,4 +472,12 @@ header p {
 .section-success .mail-icon {
   width: 220px;
   height: 220px;
+}
+#xzoom-default{
+  height: 350px; 
+  object-fit: cover
+}
+.xzoom-gallery{
+  height: 70px; 
+  object-fit: cover
 }/*# sourceMappingURL=main.css.map */
