@@ -23,7 +23,7 @@ use App\Http\Controllers\Admin\TravelPackageController;
 Route::get('/', [HomeController::class,'index'])
     ->name('home');
 
-Route::get('detail', [DetailController::class,'index'])
+Route::get('detail/{travel_package:slug}', [DetailController::class,'index'])
     ->name('detail');
 
 Route::get('checkout', [CheckoutController::class,'index'])
