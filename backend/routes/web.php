@@ -33,7 +33,7 @@ Route::group(['middleware' => ['auth','verified','admin']], function(){
     Route::get('checkout/{transaction}', [CheckoutController::class,'index'])
         ->name('checkout.index');
 
-    Route::post('checkout/create/{transaction_member}', [CheckoutController::class,'create'])
+    Route::post('checkout/create/{transaction}', [CheckoutController::class,'create'])
         ->name('checkout.create');
 
     Route::get('checkout/remove/{transaction_member}', [CheckoutController::class,'remove'])
