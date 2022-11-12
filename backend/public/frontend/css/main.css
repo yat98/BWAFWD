@@ -473,11 +473,30 @@ header p {
   width: 220px;
   height: 220px;
 }
-#xzoom-default{
-  height: 350px; 
-  object-fit: cover
+
+
+@media (min-width: 992px) {
+  .login-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(90deg, #fff 64%, #E4E6EB 36%);
+  }
 }
-.xzoom-gallery{
-  height: 70px; 
-  object-fit: cover
+
+.page-login {
+  height: 100vh;
+}
+.page-login .btn-login {
+  background-color: #FF9E53;
+  color: white;
+}
+.page-login .btn-login:hover {
+  background-color: #FFAA69;
+  color: white;
+}
+.page-login .section-left h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 30px;
 }/*# sourceMappingURL=main.css.map */
