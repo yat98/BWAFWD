@@ -7,9 +7,11 @@ use Carbon\Carbon;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 use App\Models\TravelPackage;
+use App\Mail\TransactionSuccess;
 use App\Models\TransactionMember;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
 {
@@ -104,9 +106,11 @@ class CheckoutController extends Controller
 
     public function success(Transaction $transaction)
     {
+        $transaction->load(['travelPackage.galleries','transactionMembers','user']);
         $transaction->update([
             'transaction_status' => 'PENDING',
         ]);
+        Mail::to($transaction->user->email)->send(new TransactionSuccess($transaction));
 
         return view('pages.success-checkout.index');
     }
